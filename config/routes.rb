@@ -1,11 +1,13 @@
 Wiki::Application.routes.draw do
 
-  root to: 'static_pages#home'
+#  root to: 'static_pages#home'
+  root to: 'terms#index'
   get "static_pages/home"
   get "static_pages/help"
 
   resources :terms
 
+  match '/admin_tab', to: 'terms#admin_index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

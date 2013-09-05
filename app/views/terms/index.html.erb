@@ -1,25 +1,10 @@
-<h1>Listing terms</h1>
-
-<table>
-  <tr>
-    <th>Term</th>
-    <th>Def</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div id='main'>
 <% @terms.each do |term| %>
-  <tr>
-    <td><%= term.term %></td>
-    <td><%= term.def %></td>
-    <td><%= link_to 'Show', term %></td>
-    <td><%= link_to 'Edit', edit_term_path(term) %></td>
-    <td><%= link_to 'Destroy', term, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div class="term"><b><%= term.term %></b></div>
+    <div class="def"><%= term.def %></div>
+    <br>
 <% end %>
-</table>
 
 <br />
-
-<%= link_to 'New Term', new_term_path %>
+<a href="https://docs.google.com/forms/d/1O05j0CzPTlSD9JMdooDBqeT-pcJAOjpOpR5RXBE2qp8/viewform">Submit a new term!</a>
+</div>

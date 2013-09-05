@@ -6,12 +6,49 @@ $darkgrey: #333333;
 
 body{
   font-family: Helvetica;
+  margin:0em;
 }
 
-#banner{
-  h1{
-    font-size:2em;
-    
-  }
-} 
+footer{
+  margin-left: 1em;
+}
 
+
+#back{
+  margin:0em;
+  background-color: #990000;
+  height:100%;
+}
+
+#headerbar{
+  width: 100%;
+  padding:1em;
+  margin:0;
+  h1{
+    font-size:3em;
+  }
+}
+
+#main{
+  background-color: #FFFFEE;
+  width: 70%;
+  padding:1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.term{
+  font-size: 1.2em;
+}
+
+.def{
+  
+}
+
+.small{
+  font-size: 8px;
+  color: grey;
+}
