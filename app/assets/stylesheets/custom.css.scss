@@ -24,8 +24,8 @@ footer{
   width: 100%;
   padding:1em;
   margin:0;
-  h1{
-    font-size:3em;
+  a{
+    text-decoration: none;
   }
 }
 
@@ -40,8 +40,20 @@ footer{
   
 }
 
+#alphaindex{
+  background-color: #FFFFEE;
+  width: 70%;
+  padding:1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
 .term{
   font-size: 1.2em;
+  color: black;
 }
 
 .def{

@@ -1,0 +1,5 @@
+<div id='alphaindex'>
+    <% ('A' .. 'Z').each do |alpha| %>
+       <%= link_to alpha, :id=> alpha.downcase() %>
+    <% end %>
+</div>
