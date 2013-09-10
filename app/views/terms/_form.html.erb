@@ -16,11 +16,13 @@
     <%= f.text_field :term %>
   </div>
   <div class="field">
-    <%= f.label :def %><br />
-    <%= f.text_area :def %>
+    <b>Short definition:</b> <br>
+    a short summary that will be displayed on the main page below each term.<br />
+    <%= f.text_area :def, :rows=>"10" %>
   </div>
   <div class="field">
-    <%= f.label :longdef %><br />
+    <b>Elaboration: </b><br>
+    this will be visible on each term's own page.<br />
     <%= f.text_area :longdef %>
   </div>
   <div class="actions">
