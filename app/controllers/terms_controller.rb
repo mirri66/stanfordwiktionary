@@ -23,7 +23,7 @@ class TermsController < ApplicationController
   # GET /terms/1.json
   def show
     @term = Term.find(params[:id])
-
+    @title = @term.term
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @term }
