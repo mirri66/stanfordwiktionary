@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130909175145) do
+ActiveRecord::Schema.define(:version => 20130912171230) do
 
   create_table "terms", :force => true do |t|
     t.string   "term"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130909175145) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "longdef"
+    t.string   "author"
   end
 
 end
