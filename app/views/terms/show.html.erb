@@ -26,10 +26,10 @@
           method: 'feed',
           redirect_uri: 'stanforddict.herokuapp.com',
           link: 'http://stanforddict.herokuapp.com',
-          picture: 'http://ambadylab.stanford.edu/helpnalininow/nalinigray.jpg',
-          name: 'Stanford dictionary',
-          caption: 'Spread the word, save a life',
-          description: 'Register as a bone marrow donor to increase the odds of finding a match..'
+          picture: 'https://github.com/mirri66/stanfordwiktionary/blob/master/app/assets/images/stanfordDictLogo_square.png', 
+          name: 'Stanford dictionary: ' + <%= @term.term %>,
+          caption: <%= @term.def %>,
+          description: <%= @term.longdef %> 
         };
 
         function callback(response) {
