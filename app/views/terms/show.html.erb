@@ -4,8 +4,11 @@
 <div id="showdef">
   <h2><%= @term.term %></h2>
   <h3><%= @term.def %></h3>
-  <%= @term.longdef %>
+  <br><%= @term.longdef %>
   <br><br>
+  <% if @term.author %>
+    <i>contributed by <%= @term.author %></i><br>
+  <% end %>
   <!--social-->
   Share this!<br>
   <a href="#" onclick="fb_custom_publish()"><%= image_tag "facebook_share.png", size:"25x25"%></a><br>

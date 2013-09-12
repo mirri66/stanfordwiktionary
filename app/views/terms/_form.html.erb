@@ -16,6 +16,10 @@
     <%= f.text_field :term %>
   </div>
   <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
     <b>Short definition:</b> <br>
     a short summary that will be displayed on the main page below each term.<br />
     <%= f.text_area :def, :rows=>"10" %>
