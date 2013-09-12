@@ -18,3 +18,34 @@
    <%= image_tag "facebook_share.png", size:"25x25"%></a><br>
 <%= link_to 'Back',root_path %> 
 </div>
+   <a href="#" onclick="fb_custom_publish()"><%= image_tag "facebook_share.png", size:"25x25"%></a><br>
+<script type="text/javascript">
+  function fb_custom_publish() {
+     FB.ui(
+       {
+         method: 'stream.publish',
+         message: 'test',
+         attachment: {
+           name: 'Name here',
+           caption: 'Caption here.',
+           description: (
+             'description here'
+           ),
+           href: encodeURIComponent(location.href) // post current page
+         },
+         action_links: [
+           { text: 'Code', href: 'action url here' }
+         ],
+         user_prompt_message: 'Personal message here'
+       },
+       function(response) {
+         if (response && response.post_id) {
+           alert('Post was published.');
+         } else {
+           alert('Post was not published.');
+         }
+       }
+     );  
+  }
+
+</script>
