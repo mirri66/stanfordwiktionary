@@ -6,19 +6,13 @@
   <h3><%= @term.def %></h3>
   <%= @term.longdef %>
 
+  <!--social-->
+  Share this!<br>
+  <a href="#" onclick="fb_custom_publish()"><%= image_tag "facebook_share.png", size:"25x25"%></a><br>
 </div>
-<!--social-->
-<a href="#"
-  onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;">
-   <%= image_tag "facebook_share.png", size:"25x25"%></a><br>
+
 <%= link_to 'Back',root_path %> 
 </div>
-   <a href="#" onclick="fb_custom_publish()"><%= image_tag "facebook_share.png", size:"25x25"%></a><br>
 <script type="text/javascript">
   function fb_custom_publish() {
     // calling the API ...
