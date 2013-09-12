@@ -25,7 +25,7 @@
         var obj = {
           method: 'feed',
           redirect_uri: 'stanforddict.herokuapp.com',
-          link: 'http://stanforddict.herokuapp.com',
+          link: 'http://stanforddict.herokuapp.com/<%=@term.id %>',
           picture: 'https://raw.github.com/mirri66/stanfordwiktionary/master/app/assets/images/stanfordDictLogo_square.png',
           name: 'Stanford Dictionary: <%= @term.term %>',
           caption: '<%= @term.def %>',
