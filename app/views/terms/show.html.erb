@@ -21,31 +21,21 @@
    <a href="#" onclick="fb_custom_publish()"><%= image_tag "facebook_share.png", size:"25x25"%></a><br>
 <script type="text/javascript">
   function fb_custom_publish() {
-     FB.ui(
-       {
-         method: 'stream.publish',
-         message: 'test',
-         attachment: {
-           name: 'Name here',
-           caption: 'Caption here.',
-           description: (
-             'description here'
-           ),
-           href: encodeURIComponent(location.href) // post current page
-         },
-         action_links: [
-           { text: 'Code', href: 'action url here' }
-         ],
-         user_prompt_message: 'Personal message here'
-       },
-       function(response) {
-         if (response && response.post_id) {
-           alert('Post was published.');
-         } else {
-           alert('Post was not published.');
-         }
-       }
-     );  
-  }
+    // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri: 'stanforddict.herokuapp.com',
+          link: 'http://stanforddict.herokuapp.com',
+          picture: 'http://ambadylab.stanford.edu/helpnalininow/nalinigray.jpg',
+          name: 'Stanford dictionary',
+          caption: 'Spread the word, save a life',
+          description: 'Register as a bone marrow donor to increase the odds of finding a match..'
+        };
 
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+  }
 </script>
