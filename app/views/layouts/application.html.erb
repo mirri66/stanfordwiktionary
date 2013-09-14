@@ -53,10 +53,12 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="back">
-  <%=render 'layouts/header' %>
-  <%=render 'layouts/alpha' %>
-  <%= yield %>
-  <%= render 'layouts/footer'%>
+  <div id="bg">
+    <%=render 'layouts/header' %>
+    <%=render 'layouts/alpha' %>
+    <%= yield %>
+    <%= render 'layouts/footer'%>
+  </div>
 </div>
 </body>
 </html>
