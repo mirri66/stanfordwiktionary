@@ -1,5 +1,5 @@
 <div id='alphaindex'>
     <% ('A' .. 'Z').each do |alpha| %>
-       <%= link_to alpha, :id=> alpha.downcase() %>
+       <%= link_to alpha, :controller=>"terms",:action=>"index",:string=> alpha.downcase() %>
     <% end %>
 </div>

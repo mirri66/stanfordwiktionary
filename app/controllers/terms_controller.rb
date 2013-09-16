@@ -2,9 +2,9 @@ class TermsController < ApplicationController
   # GET /terms
   # GET /terms.json
   def index
-    if params.has_key?(:id)
-#        @terms = Term.all.starts_with?(params[:id].downcase).sort_by!{|m| m.term.downcase}
-        regexp = Regexp.new('^'+params[:id], Regexp::IGNORECASE)
+    if params.has_key?(:string)
+#        @terms = Term.all.starts_with?(params[:string].downcase).sort_by!{|m| m.term.downcase}
+        regexp = Regexp.new('^'+params[:string], Regexp::IGNORECASE)
         @terms=Term.select{ |term| regexp.match(term.term)}
     else
         @terms = Term.all.sort_by!{|m| m.term.downcase}
